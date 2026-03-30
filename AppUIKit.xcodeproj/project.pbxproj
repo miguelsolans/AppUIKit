@@ -27,11 +27,19 @@
 		8B01C4F82C39B53F009B770B /* STDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01C4E02C39B53F009B770B /* STDatePicker.swift */; };
 		8B01C4F92C39B53F009B770B /* STTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01C4E22C39B53F009B770B /* STTextView.swift */; };
 		8B01C4FA2C39B53F009B770B /* STCoreUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01C4E42C39B53F009B770B /* STCoreUIColor.swift */; };
-		8B01C4FB2C39B53F009B770B /* STCoreUIEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01C4E52C39B53F009B770B /* STCoreUIEnums.swift */; };
 		8B01C4FC2C39B53F009B770B /* STCoreUIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01C4E62C39B53F009B770B /* STCoreUIFont.swift */; };
 		8B01C4FD2C39B53F009B770B /* STCoreUIImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01C4E72C39B53F009B770B /* STCoreUIImages.swift */; };
 		8B01C4FE2C39B53F009B770B /* STCoreUIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01C4E92C39B53F009B770B /* STCoreUIConfiguration.swift */; };
 		8B01C4FF2C39B53F009B770B /* STCoreUIConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01C4EA2C39B53F009B770B /* STCoreUIConfigurationManager.swift */; };
+		8B539C212F7B36D400977A6C /* DatePickerInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539C182F7B36D400977A6C /* DatePickerInputView.swift */; };
+		8B539C222F7B36D400977A6C /* InputStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539C162F7B36D400977A6C /* InputStyle.swift */; };
+		8B539C232F7B36D400977A6C /* SegmentedInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539C1B2F7B36D400977A6C /* SegmentedInputView.swift */; };
+		8B539C242F7B36D400977A6C /* TextFieldInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539C1E2F7B36D400977A6C /* TextFieldInputView.swift */; };
+		8B539C252F7B36D400977A6C /* BaseInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539C152F7B36D400977A6C /* BaseInputViewModel.swift */; };
+		8B539C262F7B36D400977A6C /* BaseInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539C142F7B36D400977A6C /* BaseInputView.swift */; };
+		8B539C272F7B36D400977A6C /* TextFieldInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539C1F2F7B36D400977A6C /* TextFieldInputViewModel.swift */; };
+		8B539C282F7B36D400977A6C /* SegmentedInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539C1C2F7B36D400977A6C /* SegmentedInputViewModel.swift */; };
+		8B539C292F7B36D400977A6C /* DatePickerInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539C192F7B36D400977A6C /* DatePickerInputViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,11 +66,19 @@
 		8B01C4E02C39B53F009B770B /* STDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STDatePicker.swift; sourceTree = "<group>"; };
 		8B01C4E22C39B53F009B770B /* STTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STTextView.swift; sourceTree = "<group>"; };
 		8B01C4E42C39B53F009B770B /* STCoreUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCoreUIColor.swift; sourceTree = "<group>"; };
-		8B01C4E52C39B53F009B770B /* STCoreUIEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCoreUIEnums.swift; sourceTree = "<group>"; };
 		8B01C4E62C39B53F009B770B /* STCoreUIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCoreUIFont.swift; sourceTree = "<group>"; };
 		8B01C4E72C39B53F009B770B /* STCoreUIImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCoreUIImages.swift; sourceTree = "<group>"; };
 		8B01C4E92C39B53F009B770B /* STCoreUIConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCoreUIConfiguration.swift; sourceTree = "<group>"; };
 		8B01C4EA2C39B53F009B770B /* STCoreUIConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCoreUIConfigurationManager.swift; sourceTree = "<group>"; };
+		8B539C142F7B36D400977A6C /* BaseInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInputView.swift; sourceTree = "<group>"; };
+		8B539C152F7B36D400977A6C /* BaseInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInputViewModel.swift; sourceTree = "<group>"; };
+		8B539C162F7B36D400977A6C /* InputStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputStyle.swift; sourceTree = "<group>"; };
+		8B539C182F7B36D400977A6C /* DatePickerInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerInputView.swift; sourceTree = "<group>"; };
+		8B539C192F7B36D400977A6C /* DatePickerInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerInputViewModel.swift; sourceTree = "<group>"; };
+		8B539C1B2F7B36D400977A6C /* SegmentedInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedInputView.swift; sourceTree = "<group>"; };
+		8B539C1C2F7B36D400977A6C /* SegmentedInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedInputViewModel.swift; sourceTree = "<group>"; };
+		8B539C1E2F7B36D400977A6C /* TextFieldInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldInputView.swift; sourceTree = "<group>"; };
+		8B539C1F2F7B36D400977A6C /* TextFieldInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldInputViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,16 +111,10 @@
 		8B01C4B82C39B507009B770B /* AppUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				8B539C132F7B36B100977A6C /* UIComponents */,
+				8B539C122F7B369900977A6C /* Deprecated */,
 				8B01C4CD2C39B53F009B770B /* STCoreUI.docc */,
 				8B01C4DD2C39B53F009B770B /* STCoreUI.h */,
-				8B01C4D42C39B53F009B770B /* STBaseInput */,
-				8B01C4E82C39B53F009B770B /* STConstants */,
-				8B01C4E12C39B53F009B770B /* STDatePicker */,
-				8B01C4D12C39B53F009B770B /* STExtensions */,
-				8B01C4EB2C39B53F009B770B /* STManagers */,
-				8B01C4DC2C39B53F009B770B /* STPicker */,
-				8B01C4DF2C39B53F009B770B /* STTextField */,
-				8B01C4E32C39B53F009B770B /* STTextView */,
 				8B01C4B92C39B507009B770B /* AppDelegate.swift */,
 				8B01C4BB2C39B507009B770B /* SceneDelegate.swift */,
 				8B01C4BD2C39B507009B770B /* ViewController.swift */,
@@ -174,7 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				8B01C4E42C39B53F009B770B /* STCoreUIColor.swift */,
-				8B01C4E52C39B53F009B770B /* STCoreUIEnums.swift */,
 				8B01C4E62C39B53F009B770B /* STCoreUIFont.swift */,
 				8B01C4E72C39B53F009B770B /* STCoreUIImages.swift */,
 			);
@@ -188,6 +197,69 @@
 				8B01C4EA2C39B53F009B770B /* STCoreUIConfigurationManager.swift */,
 			);
 			path = STManagers;
+			sourceTree = "<group>";
+		};
+		8B539C122F7B369900977A6C /* Deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				8B01C4D42C39B53F009B770B /* STBaseInput */,
+				8B01C4E82C39B53F009B770B /* STConstants */,
+				8B01C4E12C39B53F009B770B /* STDatePicker */,
+				8B01C4D12C39B53F009B770B /* STExtensions */,
+				8B01C4EB2C39B53F009B770B /* STManagers */,
+				8B01C4DC2C39B53F009B770B /* STPicker */,
+				8B01C4DF2C39B53F009B770B /* STTextField */,
+				8B01C4E32C39B53F009B770B /* STTextView */,
+			);
+			path = Deprecated;
+			sourceTree = "<group>";
+		};
+		8B539C132F7B36B100977A6C /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				8B539C172F7B36D400977A6C /* BaseInput */,
+				8B539C1A2F7B36D400977A6C /* Calendar */,
+				8B539C1D2F7B36D400977A6C /* Segmented */,
+				8B539C202F7B36D400977A6C /* TextField */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		8B539C172F7B36D400977A6C /* BaseInput */ = {
+			isa = PBXGroup;
+			children = (
+				8B539C142F7B36D400977A6C /* BaseInputView.swift */,
+				8B539C152F7B36D400977A6C /* BaseInputViewModel.swift */,
+				8B539C162F7B36D400977A6C /* InputStyle.swift */,
+			);
+			path = BaseInput;
+			sourceTree = "<group>";
+		};
+		8B539C1A2F7B36D400977A6C /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				8B539C182F7B36D400977A6C /* DatePickerInputView.swift */,
+				8B539C192F7B36D400977A6C /* DatePickerInputViewModel.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		8B539C1D2F7B36D400977A6C /* Segmented */ = {
+			isa = PBXGroup;
+			children = (
+				8B539C1B2F7B36D400977A6C /* SegmentedInputView.swift */,
+				8B539C1C2F7B36D400977A6C /* SegmentedInputViewModel.swift */,
+			);
+			path = Segmented;
+			sourceTree = "<group>";
+		};
+		8B539C202F7B36D400977A6C /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				8B539C1E2F7B36D400977A6C /* TextFieldInputView.swift */,
+				8B539C1F2F7B36D400977A6C /* TextFieldInputViewModel.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +339,6 @@
 				8B01C4FC2C39B53F009B770B /* STCoreUIFont.swift in Sources */,
 				8B01C4F42C39B53F009B770B /* STPickerDoubleLabelTableViewCell.swift in Sources */,
 				8B01C4BE2C39B507009B770B /* ViewController.swift in Sources */,
-				8B01C4FB2C39B53F009B770B /* STCoreUIEnums.swift in Sources */,
 				8B01C4BA2C39B507009B770B /* AppDelegate.swift in Sources */,
 				8B01C4FE2C39B53F009B770B /* STCoreUIConfiguration.swift in Sources */,
 				8B01C4EC2C39B53F009B770B /* STCoreUI.docc in Sources */,
@@ -275,6 +346,15 @@
 				8B01C4F12C39B53F009B770B /* STBaseInputView.swift in Sources */,
 				8B01C4F32C39B53F009B770B /* STPicker.swift in Sources */,
 				8B01C4F02C39B53F009B770B /* STBaseInputModel.swift in Sources */,
+				8B539C212F7B36D400977A6C /* DatePickerInputView.swift in Sources */,
+				8B539C222F7B36D400977A6C /* InputStyle.swift in Sources */,
+				8B539C232F7B36D400977A6C /* SegmentedInputView.swift in Sources */,
+				8B539C242F7B36D400977A6C /* TextFieldInputView.swift in Sources */,
+				8B539C252F7B36D400977A6C /* BaseInputViewModel.swift in Sources */,
+				8B539C262F7B36D400977A6C /* BaseInputView.swift in Sources */,
+				8B539C272F7B36D400977A6C /* TextFieldInputViewModel.swift in Sources */,
+				8B539C282F7B36D400977A6C /* SegmentedInputViewModel.swift in Sources */,
+				8B539C292F7B36D400977A6C /* DatePickerInputViewModel.swift in Sources */,
 				8B01C4ED2C39B53F009B770B /* Date+Formatting.swift in Sources */,
 				8B01C4F72C39B53F009B770B /* STTextField.swift in Sources */,
 				8B01C4BC2C39B507009B770B /* SceneDelegate.swift in Sources */,
@@ -441,6 +521,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,6 +549,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
