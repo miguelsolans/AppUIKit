@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class OptionPickerInputView: BaseInputView {
+public final class OptionPickerInputView: BaseInputView {
 
     // MARK: UI Components
     private let containerStackView = UIStackView()
@@ -97,7 +97,7 @@ final class OptionPickerInputView: BaseInputView {
     }
     
     // MARK: Update UI
-    override func updateUI() {
+    public override func updateUI() {
         super.updateUI()
         placeholderLabel.text = inputViewModel.selectedOption
     }
@@ -117,20 +117,20 @@ final class OptionPickerInputView: BaseInputView {
 
 extension OptionPickerInputView: UIPickerViewDelegate, UIPickerViewDataSource {
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return inputViewModel.options.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         guard row < inputViewModel.options.count else { return nil }
         return inputViewModel.options[row]
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         guard row < inputViewModel.options.count else { return }
         
         let selected = inputViewModel.options[row]
