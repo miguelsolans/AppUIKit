@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class DatePickerInputView: BaseInputView {
+public final class DatePickerInputView: BaseInputView {
 
     // MARK: UI Components
     private let containerStackView = UIStackView()
@@ -106,7 +106,7 @@ final class DatePickerInputView: BaseInputView {
     }
     
     // MARK: Update UI
-    override func updateUI() {
+    public override func updateUI() {
         super.updateUI()
         placeholderLabel.text = inputViewModel.formattedDate()
         datePicker.date = inputViewModel.selectedDate
