@@ -7,18 +7,30 @@
 
 import UIKit
 
-// MARK: - Base Input View
+/// `BaseInputView` is a base class for creating customizable user input components with a consistent design.
+/// It provides a structured layout for displaying a title, user input view, and a bottom label.
+///
+///  Example Usage:
+///  ```swift
+///  let view = BaseInputView(title: "Title")
+///  view.showBottomLabelWithText("Error", type: .successType)
+///  view.backgroundColor = UIColor(named: STCoreUIColor.AppBackgroundColor)
+///  ```
 open class BaseInputView: UIView {
     
     // MARK: Properties
+    
     public let viewModel: BaseInputViewModel
     public var style: InputStyle
     
     // MARK: UI Components
+    
     fileprivate let stackView = UIStackView()
     fileprivate let titleLabel = UILabel()
     fileprivate let bottomLabel = UILabel()
-    public let userInputView = UIView() // Subclasses replace with real input
+    
+    /// The view which subclasses can place their input components in
+    public let userInputView = UIView()
     
     // MARK: Init
     public init(viewModel: BaseInputViewModel, style: InputStyle = InputStyle()) {
@@ -125,14 +137,6 @@ open class BaseInputView: UIView {
             self.alpha = 0.5;
         }
     }
-}
-
-// MARK: - Bottom Label Type Enum
-public enum BottomLabelType {
-    case successType
-    case warningType
-    case errorType
-    case informativeType
 }
 
 // MARK: - Swift Macros

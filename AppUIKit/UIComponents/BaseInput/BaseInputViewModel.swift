@@ -7,8 +7,18 @@
 
 import Foundation
 
-/// Base class for all input UI elements (TextField, DatePicker, OptionPicker, etc.)
-public class BaseInputViewModel {
+/// `BaseInputViewModel` is a base model used to configure customizable user input components.
+/// It defines common properties such as title, placeholder, subtitle, and validation state.
+///
+///  Example Usage:
+///  ```swift
+///  let viewModel = BaseInputViewModel(
+///      title: "Email",
+///      placeholder: "Enter your email",
+///      isMandatory: true
+///  )
+///  ```
+open class BaseInputViewModel {
     
     /// The title of the input field
     let title: String
@@ -41,4 +51,12 @@ public class BaseInputViewModel {
         self.isEnabled = isEnabled
         self.errorMessage = errorMessage
     }
+}
+
+// MARK: - Bottom Label Type Enum
+public enum BottomLabelType {
+    case successType
+    case warningType
+    case errorType
+    case informativeType
 }

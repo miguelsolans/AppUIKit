@@ -13,13 +13,12 @@ public enum TextFieldType {
     case currency(String) // pass currency symbol, e.g. "€"
 }
 
-/// ViewModel for the DatePicker input
 public final class TextFieldInputViewModel: BaseInputViewModel {
     
-    /// Text input by user
+    /// Text input text by user
     public var inputText: String
     
-    /// Type of TextField input
+    /// The TextField input type
     public var textType: TextFieldType
     
     /// Enable/disable interaction

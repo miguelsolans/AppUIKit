@@ -7,8 +7,7 @@
 
 import UIKit
 
-/// View for the SegmentedInput
-public final class SegmentedInputView: BaseInputView {
+final class SegmentedInputView: BaseInputView {
 
     // MARK: UI Components
     private let segmentedControl = UISegmentedControl()
@@ -45,7 +44,7 @@ public final class SegmentedInputView: BaseInputView {
     }
 
     // MARK: Update UI
-    public override func updateUI() {
+    override func updateUI() {
         super.updateUI()
         
         segmentedControl.removeAllSegments()
@@ -77,6 +76,8 @@ public final class SegmentedInputView: BaseInputView {
     
     let style = InputStyle()
     let inputView = SegmentedInputView(viewModel: viewModel, style: InputStyle())
+    
+    inputView.showBottomLabel("This is an informative label below the segmented control.", type: .informativeType)
     
     let vc = UIViewController()
     vc.view.backgroundColor = .systemBackground

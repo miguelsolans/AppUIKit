@@ -7,19 +7,14 @@
 
 import Foundation
 
-/// ViewModel for an OptionPicker (SegmentedControl)
 public final class SegmentedInputViewModel: BaseInputViewModel {
     
-    /// Available options for the user to select
     public var options: [String]
     
-    /// Currently selected index
     public var selectedIndex: Int?
     
-    /// Enable/disable interaction
     public var isEditable: Bool
     
-    /// Closure called when selection changes
     public var onSelectionChanged: ((Int?) -> Void)?
     
     public init(

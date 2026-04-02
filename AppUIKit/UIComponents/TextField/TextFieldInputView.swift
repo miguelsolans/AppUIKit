@@ -7,7 +7,7 @@
 
 import UIKit
 
-public final class TextFieldInputView: BaseInputView {
+final class TextFieldInputView: BaseInputView {
 
     // MARK: UI Components
     private let containerStackView = UIStackView()
@@ -47,12 +47,13 @@ public final class TextFieldInputView: BaseInputView {
         
         // TextField setup
         textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.delegate = self
         textField.borderStyle = .none
         textField.font = style.placeholderFont
         textField.placeholder = inputViewModel.placeholder
         textField.isUserInteractionEnabled = inputViewModel.isEditable
         textField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
-        textField.inputAccessoryView = makeAccessoryView() // <-- add Done button
+        textField.inputAccessoryView = makeAccessoryView()
         
         switch inputViewModel.textType {
         case .text:
@@ -109,9 +110,21 @@ public final class TextFieldInputView: BaseInputView {
     private func makeAccessoryView() -> UIToolbar {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
+        
+        let label = UILabel()
+        label.text = viewModel.title
+        label.font = style.placeholderFont
+        label.textColor = .label
+        label.sizeToFit()
+        
+        let titleItem = UIBarButtonItem(customView: label)
+        
         let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
         let done = UIBarButtonItem(title: "Done", style: .prominent, target: self, action: #selector(donePressed))
-        toolbar.items = [flexible, done]
+        
+        toolbar.items = [flexible, titleItem, flexible, done]
+        
         return toolbar
     }
     
@@ -121,7 +134,7 @@ public final class TextFieldInputView: BaseInputView {
     }
     
     // MARK: Update UI
-    public override func updateUI() {
+    override func updateUI() {
         super.updateUI()
         textField.text = inputViewModel.inputText
     }
@@ -136,6 +149,16 @@ public final class TextFieldInputView: BaseInputView {
     @objc private func textDidChange() {
         inputViewModel.inputText = textField.text ?? ""
         inputViewModel.onTextChanged?(inputViewModel.inputText)
+    }
+}
+
+extension TextFieldInputView: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        containerView.layer.borderColor = UIColor.systemBlue.cgColor
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        containerView.layer.borderColor = UIColor.systemGray4.cgColor
     }
 }
 

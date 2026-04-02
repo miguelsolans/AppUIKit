@@ -31,15 +31,21 @@
 		8B01C4FD2C39B53F009B770B /* STCoreUIImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01C4E72C39B53F009B770B /* STCoreUIImages.swift */; };
 		8B01C4FE2C39B53F009B770B /* STCoreUIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01C4E92C39B53F009B770B /* STCoreUIConfiguration.swift */; };
 		8B01C4FF2C39B53F009B770B /* STCoreUIConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01C4EA2C39B53F009B770B /* STCoreUIConfigurationManager.swift */; };
-		8B539C212F7B36D400977A6C /* DatePickerInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539C182F7B36D400977A6C /* DatePickerInputView.swift */; };
-		8B539C222F7B36D400977A6C /* InputStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539C162F7B36D400977A6C /* InputStyle.swift */; };
-		8B539C232F7B36D400977A6C /* SegmentedInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539C1B2F7B36D400977A6C /* SegmentedInputView.swift */; };
-		8B539C242F7B36D400977A6C /* TextFieldInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539C1E2F7B36D400977A6C /* TextFieldInputView.swift */; };
-		8B539C252F7B36D400977A6C /* BaseInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539C152F7B36D400977A6C /* BaseInputViewModel.swift */; };
-		8B539C262F7B36D400977A6C /* BaseInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539C142F7B36D400977A6C /* BaseInputView.swift */; };
-		8B539C272F7B36D400977A6C /* TextFieldInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539C1F2F7B36D400977A6C /* TextFieldInputViewModel.swift */; };
-		8B539C282F7B36D400977A6C /* SegmentedInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539C1C2F7B36D400977A6C /* SegmentedInputViewModel.swift */; };
-		8B539C292F7B36D400977A6C /* DatePickerInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B539C192F7B36D400977A6C /* DatePickerInputViewModel.swift */; };
+		8B078CA52F7ED5FE00075CC1 /* SegmentedInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B078C9C2F7ED5FE00075CC1 /* SegmentedInputView.swift */; };
+		8B078CA62F7ED5FE00075CC1 /* OptionPickerInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B078C992F7ED5FE00075CC1 /* OptionPickerInputView.swift */; };
+		8B078CA72F7ED5FE00075CC1 /* ColorPickerInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B078C962F7ED5FE00075CC1 /* ColorPickerInputView.swift */; };
+		8B078CA82F7ED5FE00075CC1 /* BaseInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B078C902F7ED5FE00075CC1 /* BaseInputViewModel.swift */; };
+		8B078CA92F7ED5FE00075CC1 /* OptionPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B078C9A2F7ED5FE00075CC1 /* OptionPickerViewModel.swift */; };
+		8B078CAA2F7ED5FE00075CC1 /* TextFieldInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B078CA32F7ED5FE00075CC1 /* TextFieldInputViewModel.swift */; };
+		8B078CAB2F7ED5FE00075CC1 /* TextFieldInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B078CA22F7ED5FE00075CC1 /* TextFieldInputView.swift */; };
+		8B078CAC2F7ED5FE00075CC1 /* SwitchInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B078C9F2F7ED5FE00075CC1 /* SwitchInputView.swift */; };
+		8B078CAD2F7ED5FE00075CC1 /* SegmentedInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B078C9D2F7ED5FE00075CC1 /* SegmentedInputViewModel.swift */; };
+		8B078CAE2F7ED5FE00075CC1 /* SwitchInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B078CA02F7ED5FE00075CC1 /* SwitchInputViewModel.swift */; };
+		8B078CAF2F7ED5FE00075CC1 /* DatePickerInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B078C932F7ED5FE00075CC1 /* DatePickerInputView.swift */; };
+		8B078CB02F7ED5FE00075CC1 /* InputStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B078C912F7ED5FE00075CC1 /* InputStyle.swift */; };
+		8B078CB12F7ED5FE00075CC1 /* DatePickerInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B078C942F7ED5FE00075CC1 /* DatePickerInputViewModel.swift */; };
+		8B078CB22F7ED5FE00075CC1 /* ColorPickerInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B078C972F7ED5FE00075CC1 /* ColorPickerInputViewModel.swift */; };
+		8B078CB32F7ED5FE00075CC1 /* BaseInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B078C8F2F7ED5FE00075CC1 /* BaseInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,15 +76,21 @@
 		8B01C4E72C39B53F009B770B /* STCoreUIImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCoreUIImages.swift; sourceTree = "<group>"; };
 		8B01C4E92C39B53F009B770B /* STCoreUIConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCoreUIConfiguration.swift; sourceTree = "<group>"; };
 		8B01C4EA2C39B53F009B770B /* STCoreUIConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCoreUIConfigurationManager.swift; sourceTree = "<group>"; };
-		8B539C142F7B36D400977A6C /* BaseInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInputView.swift; sourceTree = "<group>"; };
-		8B539C152F7B36D400977A6C /* BaseInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInputViewModel.swift; sourceTree = "<group>"; };
-		8B539C162F7B36D400977A6C /* InputStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputStyle.swift; sourceTree = "<group>"; };
-		8B539C182F7B36D400977A6C /* DatePickerInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerInputView.swift; sourceTree = "<group>"; };
-		8B539C192F7B36D400977A6C /* DatePickerInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerInputViewModel.swift; sourceTree = "<group>"; };
-		8B539C1B2F7B36D400977A6C /* SegmentedInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedInputView.swift; sourceTree = "<group>"; };
-		8B539C1C2F7B36D400977A6C /* SegmentedInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedInputViewModel.swift; sourceTree = "<group>"; };
-		8B539C1E2F7B36D400977A6C /* TextFieldInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldInputView.swift; sourceTree = "<group>"; };
-		8B539C1F2F7B36D400977A6C /* TextFieldInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldInputViewModel.swift; sourceTree = "<group>"; };
+		8B078C8F2F7ED5FE00075CC1 /* BaseInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInputView.swift; sourceTree = "<group>"; };
+		8B078C902F7ED5FE00075CC1 /* BaseInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInputViewModel.swift; sourceTree = "<group>"; };
+		8B078C912F7ED5FE00075CC1 /* InputStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputStyle.swift; sourceTree = "<group>"; };
+		8B078C932F7ED5FE00075CC1 /* DatePickerInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerInputView.swift; sourceTree = "<group>"; };
+		8B078C942F7ED5FE00075CC1 /* DatePickerInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerInputViewModel.swift; sourceTree = "<group>"; };
+		8B078C962F7ED5FE00075CC1 /* ColorPickerInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerInputView.swift; sourceTree = "<group>"; };
+		8B078C972F7ED5FE00075CC1 /* ColorPickerInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerInputViewModel.swift; sourceTree = "<group>"; };
+		8B078C992F7ED5FE00075CC1 /* OptionPickerInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionPickerInputView.swift; sourceTree = "<group>"; };
+		8B078C9A2F7ED5FE00075CC1 /* OptionPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionPickerViewModel.swift; sourceTree = "<group>"; };
+		8B078C9C2F7ED5FE00075CC1 /* SegmentedInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedInputView.swift; sourceTree = "<group>"; };
+		8B078C9D2F7ED5FE00075CC1 /* SegmentedInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedInputViewModel.swift; sourceTree = "<group>"; };
+		8B078C9F2F7ED5FE00075CC1 /* SwitchInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchInputView.swift; sourceTree = "<group>"; };
+		8B078CA02F7ED5FE00075CC1 /* SwitchInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchInputViewModel.swift; sourceTree = "<group>"; };
+		8B078CA22F7ED5FE00075CC1 /* TextFieldInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldInputView.swift; sourceTree = "<group>"; };
+		8B078CA32F7ED5FE00075CC1 /* TextFieldInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldInputViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +211,70 @@
 			path = STManagers;
 			sourceTree = "<group>";
 		};
+		8B078C922F7ED5FE00075CC1 /* BaseInput */ = {
+			isa = PBXGroup;
+			children = (
+				8B078C8F2F7ED5FE00075CC1 /* BaseInputView.swift */,
+				8B078C902F7ED5FE00075CC1 /* BaseInputViewModel.swift */,
+				8B078C912F7ED5FE00075CC1 /* InputStyle.swift */,
+			);
+			path = BaseInput;
+			sourceTree = "<group>";
+		};
+		8B078C952F7ED5FE00075CC1 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				8B078C932F7ED5FE00075CC1 /* DatePickerInputView.swift */,
+				8B078C942F7ED5FE00075CC1 /* DatePickerInputViewModel.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		8B078C982F7ED5FE00075CC1 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				8B078C962F7ED5FE00075CC1 /* ColorPickerInputView.swift */,
+				8B078C972F7ED5FE00075CC1 /* ColorPickerInputViewModel.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		8B078C9B2F7ED5FE00075CC1 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				8B078C992F7ED5FE00075CC1 /* OptionPickerInputView.swift */,
+				8B078C9A2F7ED5FE00075CC1 /* OptionPickerViewModel.swift */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
+		8B078C9E2F7ED5FE00075CC1 /* Segmented */ = {
+			isa = PBXGroup;
+			children = (
+				8B078C9C2F7ED5FE00075CC1 /* SegmentedInputView.swift */,
+				8B078C9D2F7ED5FE00075CC1 /* SegmentedInputViewModel.swift */,
+			);
+			path = Segmented;
+			sourceTree = "<group>";
+		};
+		8B078CA12F7ED5FE00075CC1 /* Switch */ = {
+			isa = PBXGroup;
+			children = (
+				8B078C9F2F7ED5FE00075CC1 /* SwitchInputView.swift */,
+				8B078CA02F7ED5FE00075CC1 /* SwitchInputViewModel.swift */,
+			);
+			path = Switch;
+			sourceTree = "<group>";
+		};
+		8B078CA42F7ED5FE00075CC1 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				8B078CA22F7ED5FE00075CC1 /* TextFieldInputView.swift */,
+				8B078CA32F7ED5FE00075CC1 /* TextFieldInputViewModel.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
 		8B539C122F7B369900977A6C /* Deprecated */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,49 +293,15 @@
 		8B539C132F7B36B100977A6C /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				8B539C172F7B36D400977A6C /* BaseInput */,
-				8B539C1A2F7B36D400977A6C /* Calendar */,
-				8B539C1D2F7B36D400977A6C /* Segmented */,
-				8B539C202F7B36D400977A6C /* TextField */,
+				8B078C922F7ED5FE00075CC1 /* BaseInput */,
+				8B078C952F7ED5FE00075CC1 /* Calendar */,
+				8B078C982F7ED5FE00075CC1 /* Color */,
+				8B078C9B2F7ED5FE00075CC1 /* Picker */,
+				8B078C9E2F7ED5FE00075CC1 /* Segmented */,
+				8B078CA12F7ED5FE00075CC1 /* Switch */,
+				8B078CA42F7ED5FE00075CC1 /* TextField */,
 			);
 			path = UIComponents;
-			sourceTree = "<group>";
-		};
-		8B539C172F7B36D400977A6C /* BaseInput */ = {
-			isa = PBXGroup;
-			children = (
-				8B539C142F7B36D400977A6C /* BaseInputView.swift */,
-				8B539C152F7B36D400977A6C /* BaseInputViewModel.swift */,
-				8B539C162F7B36D400977A6C /* InputStyle.swift */,
-			);
-			path = BaseInput;
-			sourceTree = "<group>";
-		};
-		8B539C1A2F7B36D400977A6C /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-				8B539C182F7B36D400977A6C /* DatePickerInputView.swift */,
-				8B539C192F7B36D400977A6C /* DatePickerInputViewModel.swift */,
-			);
-			path = Calendar;
-			sourceTree = "<group>";
-		};
-		8B539C1D2F7B36D400977A6C /* Segmented */ = {
-			isa = PBXGroup;
-			children = (
-				8B539C1B2F7B36D400977A6C /* SegmentedInputView.swift */,
-				8B539C1C2F7B36D400977A6C /* SegmentedInputViewModel.swift */,
-			);
-			path = Segmented;
-			sourceTree = "<group>";
-		};
-		8B539C202F7B36D400977A6C /* TextField */ = {
-			isa = PBXGroup;
-			children = (
-				8B539C1E2F7B36D400977A6C /* TextFieldInputView.swift */,
-				8B539C1F2F7B36D400977A6C /* TextFieldInputViewModel.swift */,
-			);
-			path = TextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,19 +388,25 @@
 				8B01C4F12C39B53F009B770B /* STBaseInputView.swift in Sources */,
 				8B01C4F32C39B53F009B770B /* STPicker.swift in Sources */,
 				8B01C4F02C39B53F009B770B /* STBaseInputModel.swift in Sources */,
-				8B539C212F7B36D400977A6C /* DatePickerInputView.swift in Sources */,
-				8B539C222F7B36D400977A6C /* InputStyle.swift in Sources */,
-				8B539C232F7B36D400977A6C /* SegmentedInputView.swift in Sources */,
-				8B539C242F7B36D400977A6C /* TextFieldInputView.swift in Sources */,
-				8B539C252F7B36D400977A6C /* BaseInputViewModel.swift in Sources */,
-				8B539C262F7B36D400977A6C /* BaseInputView.swift in Sources */,
-				8B539C272F7B36D400977A6C /* TextFieldInputViewModel.swift in Sources */,
-				8B539C282F7B36D400977A6C /* SegmentedInputViewModel.swift in Sources */,
-				8B539C292F7B36D400977A6C /* DatePickerInputViewModel.swift in Sources */,
 				8B01C4ED2C39B53F009B770B /* Date+Formatting.swift in Sources */,
 				8B01C4F72C39B53F009B770B /* STTextField.swift in Sources */,
 				8B01C4BC2C39B507009B770B /* SceneDelegate.swift in Sources */,
 				8B01C4F92C39B53F009B770B /* STTextView.swift in Sources */,
+				8B078CA52F7ED5FE00075CC1 /* SegmentedInputView.swift in Sources */,
+				8B078CA62F7ED5FE00075CC1 /* OptionPickerInputView.swift in Sources */,
+				8B078CA72F7ED5FE00075CC1 /* ColorPickerInputView.swift in Sources */,
+				8B078CA82F7ED5FE00075CC1 /* BaseInputViewModel.swift in Sources */,
+				8B078CA92F7ED5FE00075CC1 /* OptionPickerViewModel.swift in Sources */,
+				8B078CAA2F7ED5FE00075CC1 /* TextFieldInputViewModel.swift in Sources */,
+				8B078CAB2F7ED5FE00075CC1 /* TextFieldInputView.swift in Sources */,
+				8B078CAC2F7ED5FE00075CC1 /* SwitchInputView.swift in Sources */,
+				8B078CAD2F7ED5FE00075CC1 /* SegmentedInputViewModel.swift in Sources */,
+				8B078CAE2F7ED5FE00075CC1 /* SwitchInputViewModel.swift in Sources */,
+				8B078CAF2F7ED5FE00075CC1 /* DatePickerInputView.swift in Sources */,
+				8B078CB02F7ED5FE00075CC1 /* InputStyle.swift in Sources */,
+				8B078CB12F7ED5FE00075CC1 /* DatePickerInputViewModel.swift in Sources */,
+				8B078CB22F7ED5FE00075CC1 /* ColorPickerInputViewModel.swift in Sources */,
+				8B078CB32F7ED5FE00075CC1 /* BaseInputView.swift in Sources */,
 				8B01C4EF2C39B53F009B770B /* UITextView+AccessoryView.swift in Sources */,
 				8B01C4F52C39B53F009B770B /* STPickerModel.swift in Sources */,
 				8B01C4F62C39B53F009B770B /* STPickerViewController.swift in Sources */,

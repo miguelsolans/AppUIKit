@@ -1,33 +1,33 @@
 //
-//  DatePickerInputView.swift
+//  OptionPickerInputView.swift
 //  AppTemplate
 //
-//  Created by Miguel Solans on 29/03/2026.
+//  Created by Miguel Solans on 01/04/2026.
 //
 
 import UIKit
 
-final class DatePickerInputView: BaseInputView {
+final class OptionPickerInputView: BaseInputView {
 
     // MARK: UI Components
     private let containerStackView = UIStackView()
     private let containerView = UIView()
     private let placeholderLabel = UILabel()
     private let chevronImageView = UIImageView(image: UIImage(systemName: "chevron.down"))
-    private let calendarImageView = UIImageView(image: UIImage(systemName: "calendar"))
-    private let datePicker = UIDatePicker()
+    private let pickerView = UIPickerView()
     
     private var isExpanded = false
     
-    public var inputViewModel: DatePickerInputViewModel {
-        return super.viewModel as! DatePickerInputViewModel
+    public var inputViewModel: OptionInputViewModel {
+        return super.viewModel as! OptionInputViewModel
     }
 
     // MARK: Init
-    public init(viewModel: DatePickerInputViewModel, style: InputStyle = InputStyle()) {
+    public init(viewModel: OptionInputViewModel, style: InputStyle = InputStyle()) {
         super.init(viewModel: viewModel, style: style)
         setupUI()
         updateUI()
+        setupBindings()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -58,26 +58,17 @@ final class DatePickerInputView: BaseInputView {
         chevronImageView.tintColor = .systemGray
         chevronImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        // Calendar styling
-        calendarImageView.tintColor = .systemGray
-        calendarImageView.translatesAutoresizingMaskIntoConstraints = false
-        
         // DatePicker setup
-        datePicker.datePickerMode = .date
-        datePicker.preferredDatePickerStyle = .wheels
-        datePicker.isHidden = true
-        datePicker.addTarget(self, action: #selector(dateChanged), for: .valueChanged)
+        pickerView.isHidden = true
+        pickerView.delegate = self
+        pickerView.dataSource = self
         
         // Add subviews to container
-        containerView.addSubview(calendarImageView)
         containerView.addSubview(placeholderLabel)
         containerView.addSubview(chevronImageView)
         
         NSLayoutConstraint.activate([
-            calendarImageView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
-            calendarImageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 12),
-            
-            placeholderLabel.leadingAnchor.constraint(equalTo: calendarImageView.leadingAnchor, constant: 36),
+            placeholderLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 12),
             placeholderLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -40),
             placeholderLabel.topAnchor.constraint(equalTo: containerView.topAnchor),
             placeholderLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
@@ -88,7 +79,7 @@ final class DatePickerInputView: BaseInputView {
         
         // Add container and picker to internal stack
         containerStackView.addArrangedSubview(containerView)
-        containerStackView.addArrangedSubview(datePicker)
+        containerStackView.addArrangedSubview(pickerView)
         
         // Add stack to userInputView
         userInputView.addSubview(containerStackView)
@@ -108,10 +99,7 @@ final class DatePickerInputView: BaseInputView {
     // MARK: Update UI
     override func updateUI() {
         super.updateUI()
-        placeholderLabel.text = inputViewModel.formattedDate()
-        datePicker.date = inputViewModel.selectedDate
-        datePicker.minimumDate = inputViewModel.minDate
-        datePicker.maximumDate = inputViewModel.maxDate
+        placeholderLabel.text = inputViewModel.selectedOption
     }
     
     // MARK: Actions
@@ -120,23 +108,43 @@ final class DatePickerInputView: BaseInputView {
         isExpanded.toggle()
         
         UIView.animate(withDuration: 0.25) {
-            self.datePicker.isHidden = !self.isExpanded
+            self.pickerView.isHidden = !self.isExpanded
             self.containerView.layer.borderColor = self.isExpanded ? UIColor.systemBlue.cgColor : UIColor.systemGray4.cgColor
             self.containerStackView.layoutIfNeeded()
         }
     }
+}
+
+extension OptionPickerInputView: UIPickerViewDelegate, UIPickerViewDataSource {
     
-    @objc private func dateChanged() {
-        inputViewModel.selectedDate = datePicker.date
-        placeholderLabel.text = inputViewModel.formattedDate()
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return inputViewModel.options.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        guard row < inputViewModel.options.count else { return nil }
+        return inputViewModel.options[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        guard row < inputViewModel.options.count else { return }
+        
+        let selected = inputViewModel.options[row]
+        inputViewModel.selectedOption = selected
+        inputViewModel.onSelectionChanged?()
+        
+        updateUI()
     }
 }
 
-#Preview("DatePickerInputView") {
+#Preview("OptionPickerInputView") {
+    let viewModel = OptionInputViewModel(title: "Title", isEditable: true, placeholder: "Placeholder", subtitle: "Subtitle", options: ["Option A", "Option B", "Option C"], selectedOption: "Option C", isMandatory: true);
     
-    let viewModel = DatePickerInputViewModel(title: "Title", selectedDate: Date(), isEditable: true, placeholder: "Placeholder", subtitle: "Subtitle", isMandatory: true)
-    
-    let inputView = DatePickerInputView(viewModel: viewModel, style: InputStyle())
+    let inputView = OptionPickerInputView(viewModel: viewModel, style: InputStyle())
     
     inputView.showBottomLabel("Error label", type: .errorType)
     
@@ -157,4 +165,14 @@ final class DatePickerInputView: BaseInputView {
     ])
     
     return vc
+}
+
+extension OptionPickerInputView {
+    
+    func setupBindings() {
+        
+        inputViewModel.onDataUpdated = { [weak self] in
+            self?.pickerView.reloadAllComponents()
+        }
+    }
 }
