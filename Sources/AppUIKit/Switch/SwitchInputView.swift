@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SwitchInputView: BaseInputView {
+public final class SwitchInputView: BaseInputView {
 
     // MARK: UI
     private let containerView = UIView()
@@ -83,7 +83,7 @@ final class SwitchInputView: BaseInputView {
     }
 
     // MARK: Update UI
-    override func updateUI() {
+    public override func updateUI() {
         super.updateUI()
         placeholderLabel.text = inputViewModel.placeholder
         toggleSwitch.isOn = inputViewModel.isOn

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ColorPickerInputView: BaseInputView {
+public final class ColorPickerInputView: BaseInputView {
 
     // MARK: UI
     private let containerView = UIView()
@@ -94,7 +94,7 @@ final class ColorPickerInputView: BaseInputView {
     }
 
     // MARK: Update UI
-    override func updateUI() {
+    public override func updateUI() {
         super.updateUI()
         placeholderLabel.text = inputViewModel.placeholder
         colorPreviewView.backgroundColor = inputViewModel.selectedColor
@@ -115,7 +115,7 @@ final class ColorPickerInputView: BaseInputView {
 // MARK: - UIColorPicker Delegate
 extension ColorPickerInputView: UIColorPickerViewControllerDelegate {
 
-    func colorPickerViewControllerDidSelectColor(_ viewController: UIColorPickerViewController) {
+    public func colorPickerViewControllerDidSelectColor(_ viewController: UIColorPickerViewController) {
         let color = viewController.selectedColor
         inputViewModel.selectedColor = color
         colorPreviewView.backgroundColor = color
@@ -156,7 +156,7 @@ extension ColorPickerInputView: UIColorPickerViewControllerDelegate {
     return vc
 }
 
-extension UIColor {
+public extension UIColor {
     
     convenience init?(hexString: String) {
             var hex = hexString.trimmingCharacters(in: .whitespacesAndNewlines)

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TextFieldInputView: BaseInputView {
+public final class TextFieldInputView: BaseInputView {
 
     // MARK: UI Components
     private let containerStackView = UIStackView()
@@ -134,7 +134,7 @@ final class TextFieldInputView: BaseInputView {
     }
     
     // MARK: Update UI
-    override func updateUI() {
+    public override func updateUI() {
         super.updateUI()
         textField.text = inputViewModel.inputText
     }
@@ -153,11 +153,11 @@ final class TextFieldInputView: BaseInputView {
 }
 
 extension TextFieldInputView: UITextFieldDelegate {
-    func textFieldDidBeginEditing(_ textField: UITextField) {
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
         containerView.layer.borderColor = UIColor.systemBlue.cgColor
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    public func textFieldDidEndEditing(_ textField: UITextField) {
         containerView.layer.borderColor = UIColor.systemGray4.cgColor
     }
 }

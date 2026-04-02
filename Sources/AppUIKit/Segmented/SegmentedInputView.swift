@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SegmentedInputView: BaseInputView {
+public final class SegmentedInputView: BaseInputView {
 
     // MARK: UI Components
     private let segmentedControl = UISegmentedControl()
@@ -44,7 +44,7 @@ final class SegmentedInputView: BaseInputView {
     }
 
     // MARK: Update UI
-    override func updateUI() {
+    public override func updateUI() {
         super.updateUI()
         
         segmentedControl.removeAllSegments()
