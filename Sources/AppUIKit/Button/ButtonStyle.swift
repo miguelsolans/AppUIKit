@@ -27,7 +27,7 @@ public struct ButtonStyle {
     
     public var contentInsets: NSDirectionalEdgeInsets
     
-    init(
+    public init(
         backgroundColor: UIColor = UIColor.systemBlue,
         titleColor: UIColor = UIColor.white,
         borderColor: UIColor = UIColor.systemBlue,
