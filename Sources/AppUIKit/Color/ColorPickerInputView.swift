@@ -34,9 +34,10 @@ public final class ColorPickerInputView: BaseInputView {
     // MARK: Setup
     private func setupUI() {
         // Container styling
-        containerView.layer.cornerRadius = 12
-        containerView.layer.borderWidth = 1
+        containerView.layer.cornerRadius = style.cornerRadius
+        containerView.layer.borderWidth = style.borderWidth
         containerView.layer.borderColor = style.borderColor.cgColor
+        containerView.backgroundColor = style.backgroundColor
         containerView.translatesAutoresizingMaskIntoConstraints = false
 
         // Label
@@ -137,7 +138,7 @@ extension ColorPickerInputView: UIColorPickerViewControllerDelegate {
         style: InputStyle()
     )
     
-    inputView.showBottomLabel("Error label", type: .errorType)
+    inputView.showBottomLabel("Error label", type: .informativeType)
     
     let vc = UIViewController()
     vc.view.backgroundColor = .systemBackground

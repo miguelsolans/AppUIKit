@@ -33,9 +33,9 @@ public final class SwitchInputView: BaseInputView {
 
     // MARK: Setup
     private func setupUI() {
-        // Container styling (optional, like your other inputs)
-        containerView.layer.cornerRadius = 12
-        containerView.layer.borderWidth = 1
+        containerView.backgroundColor = style.backgroundColor
+        containerView.layer.cornerRadius = style.cornerRadius
+        containerView.layer.borderWidth = style.borderWidth
         containerView.layer.borderColor = style.borderColor.cgColor
         containerView.translatesAutoresizingMaskIntoConstraints = false
 

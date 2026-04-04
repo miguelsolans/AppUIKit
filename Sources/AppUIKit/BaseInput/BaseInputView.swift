@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 /// `BaseInputView` is a base class for creating customizable user input components with a consistent design.
 /// It provides a structured layout for displaying a title, user input view, and a bottom label.
@@ -143,10 +144,10 @@ open class BaseInputView: UIView {
 #Preview("BaseInputView") {
     
     let viewModel = BaseInputViewModel(title: "Title", isMandatory: true)
-    let style = InputStyle()
-    let inputView = BaseInputView(viewModel: viewModel, style: style)
     
-    inputView.showBottomLabel("Hello world", type: .errorType)
+    let inputView = BaseInputView(viewModel: viewModel, style: InputStyle())
+    
+    inputView.showBottomLabel("Hello world", type: .informativeType)
     
     let vc = UIViewController()
     vc.view.backgroundColor = .systemBackground

@@ -74,7 +74,6 @@ public final class SegmentedInputView: BaseInputView {
     
     let viewModel = SegmentedInputViewModel(title: "Title", options: ["Income", "Expense"], selectedIndex: 0, isEditable: true, placeholder: "Placeholder", subtitle: "Subtitle", isMandatory: false)
     
-    let style = InputStyle()
     let inputView = SegmentedInputView(viewModel: viewModel, style: InputStyle())
     
     inputView.showBottomLabel("This is an informative label below the segmented control.", type: .informativeType)

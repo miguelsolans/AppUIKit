@@ -40,9 +40,10 @@ public final class TextFieldInputView: BaseInputView {
         containerStackView.translatesAutoresizingMaskIntoConstraints = false
         
         // Container styling
-        containerView.layer.cornerRadius = 12
-        containerView.layer.borderWidth = 1
-        containerView.layer.borderColor = UIColor.systemGray4.cgColor
+        containerView.backgroundColor = style.backgroundColor
+        containerView.layer.cornerRadius = style.cornerRadius
+        containerView.layer.borderWidth = style.borderWidth
+        containerView.layer.borderColor = style.borderColor.cgColor
         containerView.translatesAutoresizingMaskIntoConstraints = false
         
         // TextField setup
@@ -130,7 +131,7 @@ public final class TextFieldInputView: BaseInputView {
     
     @objc private func donePressed() {
         textField.resignFirstResponder()
-        containerView.layer.borderColor = UIColor.systemGray4.cgColor
+        containerView.layer.borderColor = style.borderColor.cgColor
     }
     
     // MARK: Update UI
@@ -143,7 +144,7 @@ public final class TextFieldInputView: BaseInputView {
     @objc private func focusTextField() {
         guard inputViewModel.isEditable else { return }
         textField.becomeFirstResponder()
-        containerView.layer.borderColor = UIColor.systemBlue.cgColor
+        containerView.layer.borderColor = style.selectedBorderColor.cgColor
     }
     
     @objc private func textDidChange() {
@@ -154,11 +155,11 @@ public final class TextFieldInputView: BaseInputView {
 
 extension TextFieldInputView: UITextFieldDelegate {
     public func textFieldDidBeginEditing(_ textField: UITextField) {
-        containerView.layer.borderColor = UIColor.systemBlue.cgColor
+        containerView.layer.borderColor = style.selectedBorderColor.cgColor
     }
     
     public func textFieldDidEndEditing(_ textField: UITextField) {
-        containerView.layer.borderColor = UIColor.systemGray4.cgColor
+        containerView.layer.borderColor = style.borderColor.cgColor
     }
 }
 

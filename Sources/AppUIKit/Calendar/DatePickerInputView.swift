@@ -44,10 +44,12 @@ public final class DatePickerInputView: BaseInputView {
         containerStackView.translatesAutoresizingMaskIntoConstraints = false
         
         // Container styling
-        containerView.layer.cornerRadius = 12
-        containerView.layer.borderWidth = 1
-        containerView.layer.borderColor = UIColor.systemGray4.cgColor
+        containerView.layer.cornerRadius = style.cornerRadius
+        containerView.layer.borderWidth = style.borderWidth
+        containerView.layer.borderColor = style.borderColor.cgColor
         containerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        containerView.backgroundColor = style.backgroundColor
         
         // Button styling
         placeholderLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -121,7 +123,7 @@ public final class DatePickerInputView: BaseInputView {
         
         UIView.animate(withDuration: 0.25) {
             self.datePicker.isHidden = !self.isExpanded
-            self.containerView.layer.borderColor = self.isExpanded ? UIColor.systemBlue.cgColor : UIColor.systemGray4.cgColor
+            self.containerView.layer.borderColor = self.isExpanded ? self.style.selectedBorderColor.cgColor : self.style.borderColor.cgColor
             self.containerStackView.layoutIfNeeded()
         }
     }
@@ -134,12 +136,16 @@ public final class DatePickerInputView: BaseInputView {
 
 #Preview("DatePickerInputView") {
     
-    let viewModel = DatePickerInputViewModel(title: "Title", selectedDate: Date(), isEditable: true, placeholder: "Placeholder", subtitle: "Subtitle", isMandatory: true)
+    let viewModel = DatePickerInputViewModel(
+        title: "Title",
+        selectedDate: Date(),
+        isEditable: true,
+        placeholder: "Placeholder",
+        subtitle: "Subtitle",
+        isMandatory: true
+    )
     
     let inputView = DatePickerInputView(viewModel: viewModel, style: InputStyle())
-    
-    inputView.showBottomLabel("Error label", type: .errorType)
-    
     
     
     let vc = UIViewController()

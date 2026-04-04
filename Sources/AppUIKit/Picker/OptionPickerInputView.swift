@@ -44,9 +44,10 @@ public final class OptionPickerInputView: BaseInputView {
         containerStackView.translatesAutoresizingMaskIntoConstraints = false
         
         // Container styling
-        containerView.layer.cornerRadius = 12
-        containerView.layer.borderWidth = 1
-        containerView.layer.borderColor = UIColor.systemGray4.cgColor
+        containerView.backgroundColor = style.backgroundColor
+        containerView.layer.cornerRadius = style.cornerRadius
+        containerView.layer.borderWidth = style.borderWidth
+        containerView.layer.borderColor = style.borderColor.cgColor
         containerView.translatesAutoresizingMaskIntoConstraints = false
         
         // Button styling
@@ -109,7 +110,7 @@ public final class OptionPickerInputView: BaseInputView {
         
         UIView.animate(withDuration: 0.25) {
             self.pickerView.isHidden = !self.isExpanded
-            self.containerView.layer.borderColor = self.isExpanded ? UIColor.systemBlue.cgColor : UIColor.systemGray4.cgColor
+            self.containerView.layer.borderColor = self.isExpanded ? self.style.selectedBorderColor.cgColor : self.style.borderColor.cgColor
             self.containerStackView.layoutIfNeeded()
         }
     }
@@ -142,6 +143,7 @@ extension OptionPickerInputView: UIPickerViewDelegate, UIPickerViewDataSource {
 }
 
 #Preview("OptionPickerInputView") {
+    
     let viewModel = OptionInputViewModel(title: "Title", isEditable: true, placeholder: "Placeholder", subtitle: "Subtitle", options: ["Option A", "Option B", "Option C"], selectedOption: "Option C", isMandatory: true);
     
     let inputView = OptionPickerInputView(viewModel: viewModel, style: InputStyle())
